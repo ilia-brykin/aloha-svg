@@ -1,0 +1,33 @@
+{
+  "name": "aloha-svg",
+  "description": "Aloha-SVG",
+  "keywords": [
+    "icons",
+    "SVG",
+    "JS",
+    "JavaScript"
+  ],
+  "homepage": "https://github.com/ilia-brykin/aloha-svg/#README.md",
+  "version": "0.0.0",
+  "author": {
+    "name": "Ilia Brykin",
+    "email": "brykin.ilia@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/ilia-brykin/aloha-svg/issues",
+    "email": "aloha.vue@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilia-brykin/aloha-svg.git"
+  },
+  "scripts": {
+    "copy-svg": "node scriptsNode/copySvg.js",
+    "build-icons": "node scriptsNode/iconsSvgToJs.js"
+  },
+  "devDependencies": {
+    "bootstrap-icons": "1.11.3",
+    "lodash": "4.17.21"
+  }
+}
