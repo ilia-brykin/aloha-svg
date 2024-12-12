@@ -5,7 +5,15 @@ const _ = require("lodash");
 const PATHS_SVG = [
   {
     "node_modules": "./node_modules/bootstrap-icons/icons/",
-    "dist": "./dist/svg/bootstrap/"
+    "dist": path.join("dist", "svg", "bootstrap"),
+  },
+  {
+    "node_modules": "./node_modules/flag-icons/flags/4x3/",
+    "dist": path.join("dist", "svg", "flags", "4x3"),
+  },
+  {
+    "node_modules": "./node_modules/flag-icons/flags/1x1/",
+    "dist": path.join("dist", "svg", "flags", "1x1"),
   },
 ];
 
@@ -17,6 +25,13 @@ PATHS_SVG.forEach(item => {
 });
 
 function copyCurrentSVGs({ pathNodeModules, pathDist }) {
+  if (fs.existsSync(pathDist)) {
+    fs.rmSync(pathDist, { recursive: true });
+  }
+  fs.mkdirSync(pathDist, {
+    recursive: true
+  });
+
   fs.readdir(pathNodeModules, (err, files) => {
     files.forEach(fileName => {
       copyCurrentSVG({ fileName, pathNodeModules, pathDist });
