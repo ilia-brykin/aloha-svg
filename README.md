@@ -40,6 +40,11 @@ Currently, Aloha-SVG includes icons from the following libraries:
     - [Bootstrap 3 Icons](https://getbootstrap.com/docs/3.4/components/#glyphicons)
     - License: MIT
 
+4. **Tabler Icons**
+
+    - [Tabler Icons](https://tabler.io/icons)
+    - License: MIT
+
 This list will expand in the future as more libraries are added.
 
 ## Usage
@@ -51,6 +56,8 @@ import AlphabetUppercase from 'aloha-svg/js/bootstrap/AlphabetUppercase.js';
 import ArrowDown from 'aloha-svg/js/bootstrap3/ArrowDown.js';
 import De from 'aloha-svg/js/flags/1x1/De.js';
 import Bg from 'aloha-svg/js/flags/4x3/Bg.js';
+import Alarm from 'aloha-svg/js/tabler/filled/Alarm.js';
+import Activity from 'aloha-svg/js/tabler/outline/Activity.js';
 
 document.body.innerHTML = AlphabetUppercase;
 ```
