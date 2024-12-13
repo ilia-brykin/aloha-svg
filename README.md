@@ -1,3 +1,7 @@
+![npm (scoped)](https://img.shields.io/npm/v/aloha-svg?label=NPM)
+![NPM](https://img.shields.io/npm/l/aloha-svg?label=License)
+![npm](https://img.shields.io/npm/dt/aloha-svg?label=Downloads)
+
 # Aloha-SVG
 
 Aloha-SVG is a collection of SVG icons and their JavaScript equivalents, designed to simplify integration into JavaScript projects. It provides both raw SVG files and pre-converted JavaScript modules for easy usage.
