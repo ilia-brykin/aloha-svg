@@ -19,13 +19,21 @@ const PATHS_SVG = [
     "src": path.join("dist", "svg", "flags", "1x1"),
     "dist": path.join("dist", "js", "flags", "1x1"),
   },
+  {
+    "src": path.join("dist", "svg", "tabler", "filled"),
+    "dist": path.join("dist", "js", "tabler", "filled"),
+  },
+  {
+    "src": path.join("dist", "svg", "tabler", "outline"),
+    "dist": path.join("dist", "js", "tabler", "outline"),
+  },
 ];
 
-PATHS_SVG.forEach(item => {
+PATHS_SVG.forEach((item) => {
   convertCurrentSVGs({
     pathSrc: item.src,
     pathDist: item.dist,
-  })
+  });
 });
 
 function convertCurrentSVGs({ pathSrc, pathDist }) {
@@ -33,11 +41,14 @@ function convertCurrentSVGs({ pathSrc, pathDist }) {
     fs.rmSync(pathDist, { recursive: true });
   }
   fs.mkdirSync(pathDist, {
-    recursive: true
+    recursive: true,
   });
 
   fs.readdir(pathSrc, (err, files) => {
-    files.forEach(fileName => {
+    if (err) {
+      throw err;
+    }
+    files.forEach((fileName) => {
       convertCurrentSVG({ fileName, pathSrc, pathDist });
     });
   });
@@ -49,17 +60,24 @@ function convertCurrentSVG({ fileName, pathSrc, pathDist }) {
   }
 
   const SVG_FILE_PATH = path.join(pathSrc, fileName);
-  const JS_FILE_NAME = `${ _.upperFirst(_.camelCase(fileName.split(".")[0])) }.js`;
+  const JS_FILE_NAME = `${_.upperFirst(_.camelCase(fileName.split(".")[0]))}.js`;
   const JS_FILE_PATH = path.join(pathDist, JS_FILE_NAME);
-  fs.readFile(SVG_FILE_PATH, "utf8", function(err, data) {
-    if (err) {
-      throw err;
-    }
+
+  try {
+    const fd = fs.openSync(SVG_FILE_PATH, "r");
+    const data = fs.readFileSync(fd, "utf8");
+    fs.closeSync(fd);
+
     const JS_TEXT = setJsFromSvg(data);
-    fs.writeFileSync(JS_FILE_PATH, JS_TEXT, "utf8");
-  });
+
+    const fdOut = fs.openSync(JS_FILE_PATH, "w");
+    fs.writeSync(fdOut, JS_TEXT, "utf8");
+    fs.closeSync(fdOut);
+  } catch (err) {
+    console.error("Error processing file:", SVG_FILE_PATH, err);
+  }
 }
 
 function setJsFromSvg(svgText) {
-  return `export default \`${ svgText }\`;\n`;
+  return `export default \`${svgText}\`;\n`;
 }

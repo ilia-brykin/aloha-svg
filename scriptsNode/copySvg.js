@@ -15,6 +15,14 @@ const PATHS_SVG = [
     "src": path.join("node_modules", "flag-icons", "flags", "1x1"),
     "dist": path.join("dist", "svg", "flags", "1x1"),
   },
+  {
+    "src": path.join("node_modules", "@tabler", "icons", "icons", "filled"),
+    "dist": path.join("dist", "svg", "tabler", "filled"),
+  },
+  {
+    "src": path.join("node_modules", "@tabler", "icons", "icons", "outline"),
+    "dist": path.join("dist", "svg", "tabler", "outline"),
+  },
 ];
 
 PATHS_SVG.forEach(item => {
