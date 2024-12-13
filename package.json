@@ -1,14 +1,18 @@
 {
   "name": "aloha-svg",
-  "description": "Aloha-SVG",
+  "description": "Aloha-SVG is a versatile library of SVG icons and their JavaScript equivalents, providing seamless integration into JS projects.",
   "keywords": [
-    "icons",
     "SVG",
+    "icons",
+    "JavaScript",
     "JS",
-    "JavaScript"
+    "UI components",
+    "icon library",
+    "frontend",
+    "web development"
   ],
   "homepage": "https://github.com/ilia-brykin/aloha-svg/#README.md",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": {
     "name": "Ilia Brykin",
     "email": "brykin.ilia@gmail.com"
