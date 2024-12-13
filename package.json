@@ -24,7 +24,7 @@
   },
   "scripts": {
     "copy-svg": "node scriptsNode/copySvg.js",
-    "build-icons": "node scriptsNode/iconsSvgToJs.js"
+    "convert-svg": "node scriptsNode/convertSvgToJs.js"
   },
   "devDependencies": {
     "bootstrap-icons": "1.11.3",
