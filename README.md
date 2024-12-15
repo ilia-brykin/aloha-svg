@@ -29,21 +29,25 @@ Currently, Aloha-SVG includes icons from the following libraries:
 
     - [Bootstrap Icons](https://icons.getbootstrap.com/)
     - License: MIT
+    - Version: 1.11.3
 
 2. **Flag Icons**
 
     - [Flag Icons](https://github.com/lipis/flag-icons)
     - License: MIT
+    - Version: 7.2.3
 
 3. **Bootstrap 3 Glyphicons** (available as SVGs)
 
     - [Bootstrap 3 Icons](https://getbootstrap.com/docs/3.4/components/#glyphicons)
     - License: MIT
+    - Version: 3.4.1
 
 4. **Tabler Icons**
 
     - [Tabler Icons](https://tabler.io/icons)
     - License: MIT
+    - Version: 3.26.0
 
 This list will expand in the future as more libraries are added.
 
