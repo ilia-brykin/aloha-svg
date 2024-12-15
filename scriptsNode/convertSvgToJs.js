@@ -37,12 +37,11 @@ PATHS_SVG.forEach((item) => {
 });
 
 function convertCurrentSVGs({ pathSrc, pathDist }) {
-  if (fs.existsSync(pathDist)) {
-    fs.rmSync(pathDist, { recursive: true });
+  if (!fs.existsSync(pathDist)) {
+    fs.mkdirSync(pathDist, {
+      recursive: true,
+    });
   }
-  fs.mkdirSync(pathDist, {
-    recursive: true,
-  });
 
   fs.readdir(pathSrc, (err, files) => {
     if (err) {
@@ -63,6 +62,10 @@ function convertCurrentSVG({ fileName, pathSrc, pathDist }) {
   const JS_FILE_NAME = `${_.upperFirst(_.camelCase(fileName.split(".")[0]))}.js`;
   const JS_FILE_PATH = path.join(pathDist, JS_FILE_NAME);
 
+  if (fs.existsSync(JS_FILE_PATH)) {
+    return;
+  }
+
   try {
     const fd = fs.openSync(SVG_FILE_PATH, "r");
     const data = fs.readFileSync(fd, "utf8");
@@ -73,6 +76,7 @@ function convertCurrentSVG({ fileName, pathSrc, pathDist }) {
     const fdOut = fs.openSync(JS_FILE_PATH, "w");
     fs.writeSync(fdOut, JS_TEXT, "utf8");
     fs.closeSync(fdOut);
+    console.log(`File converted: ${ SVG_FILE_PATH }`);
   } catch (err) {
     console.error("Error processing file:", SVG_FILE_PATH, err);
   }

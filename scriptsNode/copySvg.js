@@ -33,12 +33,11 @@ PATHS_SVG.forEach(item => {
 });
 
 function copyCurrentSVGs({ pathSrc, pathDist }) {
-  if (fs.existsSync(pathDist)) {
-    fs.rmSync(pathDist, { recursive: true });
+  if (!fs.existsSync(pathDist)) {
+    fs.mkdirSync(pathDist, {
+      recursive: true
+    });
   }
-  fs.mkdirSync(pathDist, {
-    recursive: true
-  });
 
   fs.readdir(pathSrc, (err, files) => {
     files.forEach(fileName => {
@@ -54,9 +53,15 @@ function copyCurrentSVG({ fileName, pathSrc, pathDist }) {
 
   const SVG_FILE_PATH = path.join(pathSrc, fileName);
   const SVG_FILE_PATH_NEW = path.join(pathDist, fileName);
+  if (fs.existsSync(SVG_FILE_PATH_NEW)) {
+    return;
+  }
+
   fs.copyFile(SVG_FILE_PATH, SVG_FILE_PATH_NEW, (err) => {
     if (err) {
       console.error("Error copying file:", err);
+    } else {
+      console.log(`File copied: ${ SVG_FILE_PATH_NEW }`);
     }
   });
 }
