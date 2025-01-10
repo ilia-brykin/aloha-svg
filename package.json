@@ -31,7 +31,7 @@
     "convert-svg": "node scriptsNode/convertSvgToJs.js"
   },
   "devDependencies": {
-    "@tabler/icons": "3.26.0",
+    "@tabler/icons": "3.28.1",
     "bootstrap-icons": "1.11.3",
     "flag-icons": "7.2.3",
     "lodash": "4.17.21"
