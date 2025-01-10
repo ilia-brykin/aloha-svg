@@ -47,7 +47,7 @@ Currently, Aloha-SVG includes icons from the following libraries:
 
     - [Tabler Icons](https://tabler.io/icons)
     - License: MIT
-    - Version: 3.26.0
+    - Version: 3.28.1
 
 This list will expand in the future as more libraries are added.
 
