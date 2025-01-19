@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.4.0] - 2025-01-19
+
+### Added
+
+- Updated `flag-icons` to version 7.3.2.
+- Added the flag for the **Association of Southeast Asian Nations (ASEAN)**.
+- Fixed the flag for **Kyrgyzstan**.
+- Updated all flags to the latest version from [flag-icons](https://github.com/lipis/flag-icons) (v7.3.2).
+
 ## [1.3.0] - 2025-01-10
 
 ### Added
