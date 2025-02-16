@@ -5,7 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
-## [1.5.0] - 2025-02-25
+## [1.6.0] - 2025-02-16
+
+### Added
+
+- Updated `@tabler/icons` to version 3.30.0.
+- Added new icons from [@tabler/icons](https://github.com/tabler/tabler-icons) (v3.30.0).
+
+## [1.5.0] - 2025-02-01
 
 ### Added
 
