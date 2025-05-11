@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.7.0] - 2025-05-11
+
+### Added
+
+- Updated `bootstrap-icons` to version 1.13.1.
+- Added new icons from [Bootstrap Icons](https://icons.getbootstrap.com/) (v1.13.1).
+
+- Updated `@tabler/icons` to version 3.31.0.
+- Added new icons from [@tabler/icons](https://github.com/tabler/tabler-icons) (v3.31.0).
+
 ## [1.6.0] - 2025-02-16
 
 ### Added

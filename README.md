@@ -29,7 +29,7 @@ Currently, Aloha-SVG includes icons from the following libraries:
 
     - [Bootstrap Icons](https://icons.getbootstrap.com/)
     - License: MIT
-    - Version: 1.11.3
+    - Version: 1.13.1
 
 2. **Flag Icons**
 
@@ -47,7 +47,7 @@ Currently, Aloha-SVG includes icons from the following libraries:
 
     - [Tabler Icons](https://tabler.io/icons)
     - License: MIT
-    - Version: 3.30.0
+    - Version: 3.31.0
 
 This list will expand in the future as more libraries are added.
 
